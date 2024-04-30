@@ -21,7 +21,7 @@ struct GameOverView: View {
                 .scaledToFill()
                 .edgesIgnoringSafeArea(.all)
             HStack {
-                Text(String(score*100))
+                Text(String(score))
                     .font(.largeTitle)
                     .bold()
             }

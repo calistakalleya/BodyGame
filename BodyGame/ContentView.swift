@@ -11,7 +11,8 @@ struct ContentView: View {
     @State var isSlide:Bool = false
     var body: some View {
         if isSlide {
-            GamePlay()
+//            GamePlay()
+            GamePlayView()
         } else {
             LandingScreen(isSlide: $isSlide)
         }
