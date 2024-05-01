@@ -23,7 +23,10 @@ struct GameOverView: View {
             HStack {
                 Text(String(score))
                     .font(.largeTitle)
-                    .bold()
+                    .fontWeight(.bold)
+                    .foregroundColor(Color.black)
+                    .padding(.top, 65)
+                    .padding(.leading, 30)
             }
             .position(CGPoint(x: UIScreen.main.bounds.size.width/2, y: 200))
             // The crown image

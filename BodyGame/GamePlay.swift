@@ -105,6 +105,7 @@ struct GamePlayView: View {
                     }
                 }
             }
+            
             //X nya yang berubah banyak dan berpindah pindah
             Image(imageNames[imageIndex])
                 .resizable()
@@ -123,7 +124,7 @@ struct GamePlayView: View {
                             .font(.largeTitle)
                             .foregroundColor(.red)
                     }
-                    .offset(x: CGFloat.random(in: -10...10), y: CGFloat.random(in: -10...10)) // Menambahkan offset acak pada tombol X
+                    .offset(x: CGFloat.random(in: -500...400), y: CGFloat.random(in: -200...70)) // Menambahkan offset acak pada tombol X
                     .animation(Animation.easeInOut(duration: 0.2).repeatForever(autoreverses: true))
             
             )
