@@ -12,7 +12,7 @@ struct ContentView: View {
     var body: some View {
         if isSlide {
 //            GamePlay()
-            GamePlayView()
+            GamePlay()
         } else {
             LandingScreen(isSlide: $isSlide)
         }

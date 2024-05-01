@@ -44,22 +44,19 @@ struct LandingScreen: View {
                                 .frame(width: 30, height: 30)
                                 .offset(x:offsetX)
                                 .gesture(
-                                    DragGesture(minimumDistance: 100 ,coordinateSpace: .local)
-                                        .onChanged{value in
-                                            self.offsetX = max(0, min(buttonWidth, -50, value.translation.width + offsetX))
-                                            
+                                    DragGesture(coordinateSpace: .local)
+                                        .onChanged { value in
+                                            offsetX = value.translation.width
                                         }
-                                        .onEnded {value in
-                                            if abs(value.translation.width) >
-                                                buttonOffsetThreshold {
+                                        .onEnded { value in
+                                            if abs(offsetX) > buttonOffsetThreshold {
                                                 isSlide = true
-                                                self.offsetX = buttonWidth - 50
+                                                offsetX = buttonWidth - 50
                                             } else {
-                                                self.offsetX = 3
+                                                offsetX = 0
                                             }
-                                            
                                         }
-                                    )
+                                )
                             Spacer()
                         }
                     }
